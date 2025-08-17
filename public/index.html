@@ -1,27 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚡ ETERNAL MEMES ⚡ - Legends in the Neon Rain</title>
-    <meta name="description" content="Cyberpunk showcase of viral memes and digital legends that achieved immortality">
-    <meta name="keywords" content="cyberpunk, memes, blade runner, neon, viral, digital immortality">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+.data-stream .bit:nth-child(2) {
+            height: 12px;
+            animation-delay: 0.1s;
         }
 
-        body {
-            font-family: 'Rajdhani', sans-serif;
-            background: #0a0a0a;
-            color: #ffffff;
-            overflow-x: hidden;
-            line-height: 1.4;
-            position: relative;
+        .data-stream .bit:nth-child(3) {
+            height: 16px;
+            animation-delay: 0.2s;
+        }
+
+        .data-stream .bit:nth-child(4) {
+            height: 20px;
+            animation-delay: 0.3s;
+        }
+
+        .data-stream .bit:nth-child(5) {
+            height: 24px;
+            animation-delay: 0.4s;
+        }
+
+        @keyframes data-flow {
+            0%, 100% { opacity: 0.3; transform: scaleY(0.8); }
+            50% { opacity: 1; transform: scaleY(1.2); }
+        }
+
+        .status-text {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            letter-spacing: 0.1em;
         }
 
         /* Loading Screen */
@@ -73,6 +80,947 @@
             letter-spacing: 0.1em;
         }
 
+        /* Neon Animations */
+        @keyframes neon-flicker-pink {
+            0%, 95%, 100% { 
+                text-shadow: 
+                    0 0 5px #ff0080,
+                    0 0 10px #ff0080,
+                    0 0 15px #ff0080,
+                    0 0 20px #ff0080,
+                    0 0 35px #ff0080,
+                    0 0 50px #ff0080,
+                    0 0 2px #ffffff;
+                filter: 
+                    drop-shadow(0 0 10px #ff0080)
+                    drop-shadow(0 0 20px #ff0080)
+                    drop-shadow(0 0 30px #ff0080);
+            }
+            96%, 97% { 
+                text-shadow: 
+                    0 0 2px #ff0080,
+                    0 0 5px #ff0080,
+                    0 0 8px #ff0080,
+                    0 0 12px #ff0080,
+                    0 0 20px #ff0080,
+                    0 0 30px #ff0080,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 5px #ff0080)
+                    drop-shadow(0 0 10px #ff0080)
+                    drop-shadow(0 0 15px #ff0080);
+            }
+        }
+
+        @keyframes neon-flicker-cyan {
+            0%, 92%, 100% { 
+                text-shadow: 
+                    0 0 3px #00ffff,
+                    0 0 8px #00ffff,
+                    0 0 12px #00ffff,
+                    0 0 16px #00ffff,
+                    0 0 25px #00ffff,
+                    0 0 35px #00ffff,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 8px #00ffff)
+                    drop-shadow(0 0 16px #00ffff)
+                    drop-shadow(0 0 24px #00ffff);
+            }
+            93%, 95% { 
+                text-shadow: 
+                    0 0 1px #00ffff,
+                    0 0 4px #00ffff,
+                    0 0 6px #00ffff,
+                    0 0 8px #00ffff,
+                    0 0 12px #00ffff,
+                    0 0 18px #00ffff,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 4px #00ffff)
+                    drop-shadow(0 0 8px #00ffff)
+                    drop-shadow(0 0 12px #00ffff);
+            }
+        }
+
+        @keyframes neon-flicker-green {
+            0%, 88%, 100% { 
+                text-shadow: 
+                    0 0 3px #00ff80,
+                    0 0 8px #00ff80,
+                    0 0 12px #00ff80,
+                    0 0 16px #00ff80,
+                    0 0 25px #00ff80,
+                    0 0 35px #00ff80,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 8px #00ff80)
+                    drop-shadow(0 0 16px #00ff80)
+                    drop-shadow(0 0 24px #00ff80);
+            }
+            89%, 91% { 
+                text-shadow: 
+                    0 0 1px #00ff80,
+                    0 0 4px #00ff80,
+                    0 0 6px #00ff80,
+                    0 0 8px #00ff80,
+                    0 0 12px #00ff80,
+                    0 0 18px #00ff80,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 4px #00ff80)
+                    drop-shadow(0 0 8px #00ff80)
+                    drop-shadow(0 0 12px #00ff80);
+            }
+        }
+
+        @keyframes neon-flicker-orange {
+            0%, 94%, 100% { 
+                text-shadow: 
+                    0 0 3px #ff8000,
+                    0 0 8px #ff8000,
+                    0 0 12px #ff8000,
+                    0 0 16px #ff8000,
+                    0 0 25px #ff8000,
+                    0 0 35px #ff8000,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 8px #ff8000)
+                    drop-shadow(0 0 16px #ff8000)
+                    drop-shadow(0 0 24px #ff8000);
+            }
+            95%, 96% { 
+                text-shadow: 
+                    0 0 1px #ff8000,
+                    0 0 4px #ff8000,
+                    0 0 6px #ff8000,
+                    0 0 8px #ff8000,
+                    0 0 12px #ff8000,
+                    0 0 18px #ff8000,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 4px #ff8000)
+                    drop-shadow(0 0 8px #ff8000)
+                    drop-shadow(0 0 12px #ff8000);
+            }
+        }
+
+        @keyframes neon-flicker-purple {
+            0%, 90%, 100% { 
+                text-shadow: 
+                    0 0 3px #8000ff,
+                    0 0 8px #8000ff,
+                    0 0 12px #8000ff,
+                    0 0 16px #8000ff,
+                    0 0 25px #8000ff,
+                    0 0 35px #8000ff,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 8px #8000ff)
+                    drop-shadow(0 0 16px #8000ff)
+                    drop-shadow(0 0 24px #8000ff);
+            }
+            91%, 93% { 
+                text-shadow: 
+                    0 0 1px #8000ff,
+                    0 0 4px #8000ff,
+                    0 0 6px #8000ff,
+                    0 0 8px #8000ff,
+                    0 0 12px #8000ff,
+                    0 0 18px #8000ff,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 4px #8000ff)
+                    drop-shadow(0 0 8px #8000ff)
+                    drop-shadow(0 0 12px #8000ff);
+            }
+        }
+
+        @keyframes neon-flicker-yellow {
+            0%, 86%, 100% { 
+                text-shadow: 
+                    0 0 3px #ffff00,
+                    0 0 8px #ffff00,
+                    0 0 12px #ffff00,
+                    0 0 16px #ffff00,
+                    0 0 25px #ffff00,
+                    0 0 35px #ffff00,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 8px #ffff00)
+                    drop-shadow(0 0 16px #ffff00)
+                    drop-shadow(0 0 24px #ffff00);
+            }
+            87%, 89% { 
+                text-shadow: 
+                    0 0 1px #ffff00,
+                    0 0 4px #ffff00,
+                    0 0 6px #ffff00,
+                    0 0 8px #ffff00,
+                    0 0 12px #ffff00,
+                    0 0 18px #ffff00,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 4px #ffff00)
+                    drop-shadow(0 0 8px #ffff00)
+                    drop-shadow(0 0 12px #ffff00);
+            }
+        }
+
+        @keyframes neon-rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-terminal {
+                display: none;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .timeline::before {
+                left: 1.5rem;
+            }
+
+            .timeline-item {
+                padding-left: 4rem;
+            }
+
+            .timeline-dot {
+                left: 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-title {
+                font-size: 2rem;
+            }
+
+            .cyber-letter {
+                font-size: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">INITIALIZING NEURAL NETWORK...</div>
+        </div>
+    </div>
+
+    <!-- Cyberpunk Background Effects -->
+    <div class="cyberpunk-bg"></div>
+    <div class="neon-grid"></div>
+    <div class="scan-lines"></div>
+    
+    <!-- Rain Effect -->
+    <div class="rain-container" id="rain-container"></div>
+
+    <!-- Navigation Terminal -->
+    <div class="nav-terminal">
+        <button class="nav-button active" data-section="hero">HOME</button>
+        <button class="nav-button" data-section="data-charts">DATA</button>
+        <button class="nav-button" data-section="illusions">MIND</button>
+        <button class="nav-button" data-section="iconic-photos">ICON</button>
+        <button class="nav-button" data-section="meme-templates">MEME</button>
+        <button class="nav-button" data-section="timeline">TIME</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>ETERNAL MEMES</h1>
+            <div class="hero-subtitle">LEGENDS IN THE NEON RAIN</div>
+            <p class="hero-tagline">Digital Immortals in the Age of Information</p>
+            <a href="#data-charts" class="hero-cta">⚡ ACCESS DATABASE ⚡</a>
+        </div>
+    </section>
+
+    <!-- Data & Charts Section -->
+    <section class="section" id="data-charts">
+        <div class="container">
+            <div class="section-header">
+                <h2>⚡ DATA VAULT ⚡</h2>
+                <p>Neural patterns that rewired human consciousness before the digital age</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>NAPOLEON.EXE FAILURE</h3>
+                    <p>Minard's 1812 data visualization - the first algorithmic representation of catastrophic system failure. A masterpiece of information architecture.</p>
+                    <div class="card-links">
+                        <a href="https://www.onemodel.co/blog/great-data-storytelling-example" class="card-link" target="_blank">ACCESS</a>
+                        <a href="https://en.wikipedia.org/wiki/Charles_Joseph_Minard" class="card-link" target="_blank">ARCHIVE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>EPIDEMIC TRACE PROTOCOL</h3>
+                    <p>John Snow's 1854 cholera mapping algorithm - humanity's first viral contact tracing system. The birth of data-driven epidemiology.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak" class="card-link" target="_blank">INVESTIGATE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>NIGHTINGALE DEATH.LOG</h3>
+                    <p>Florence's polar data array proving disease vectors exceed combat casualties. Revolutionary medical data mining from the Victorian era.</p>
+                    <div class="card-links">
+                        <a href="https://commons.wikimedia.org/wiki/File:Nightingale-mortality.jpg" class="card-link" target="_blank">VIEW SOURCE</a>
+                        <a href="https://en.wikipedia.org/wiki/Florence_Nightingale" class="card-link" target="_blank">PROFILE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>XKCD SECURITY CIPHER</h3>
+                    <p>The "correct horse battery staple" protocol - cryptographic revelation that changed authentication paradigms across the neural network.</p>
+                    <div class="card-links">
+                        <a href="https://www.explainxkcd.com/wiki/index.php/936:_Password_Strength" class="card-link" target="_blank">DECRYPT</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>DUNNING-KRUGER MATRIX</h3>
+                    <p>Cognitive bias mapping algorithm revealing the inverse correlation between competence and confidence in biological neural networks.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/Dunning–Kruger_effect" class="card-link" target="_blank">ANALYZE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>GARTNER HYPE ALGORITHM</h3>
+                    <p>Predictive technology lifecycle model mapping innovation trajectories from trigger events to plateau states. Corporate future-casting protocol.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/Gartner_hype_cycle" class="card-link" target="_blank">EXECUTE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optical Illusions Section -->
+    <section class="section" id="illusions">
+        <div class="container">
+            <div class="section-header">
+                <h2>⚡ NEURAL GLITCHES ⚡</h2>
+                <p>Visual exploits that hack human perception protocols</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>THE DRESS SCHISM</h3>
+                    <p>Blue/Black vs White/Gold - A color perception virus that divided the global neural network. The great visual interpretation war of 2015.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/The_dress" class="card-link" target="_blank">ANALYZE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>ROTATION PARADOX</h3>
+                    <p>Spinning dancer algorithm exploiting ambiguous depth perception. Once you see the alternate rotation, the neural pathway is permanently altered.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/Spinning_dancer" class="card-link" target="_blank">EXECUTE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>DUAL FACE PROTOCOL</h3>
+                    <p>Wife/Mother-in-Law bistable perception exploit. A century-old hack demonstrating the malleable nature of visual processing systems.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/My_Wife_and_My_Mother-in-Law" class="card-link" target="_blank">PROCESS</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>CHECKER SHADOW HACK</h3>
+                    <p>Adelson's shadow illusion proving ocular sensors can be systematically deceived. Squares A and B: identical wavelength, different reality.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/Checker_shadow_illusion" class="card-link" target="_blank">VERIFY</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Iconic Photos Section -->
+    <section class="section" id="iconic-photos">
+        <div class="container">
+            <div class="section-header">
+                <h2>⚡ ARCHIVAL IMAGES ⚡</h2>
+                <p>Visual records that reprogrammed collective consciousness</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>EARTHRISE.JPG</h3>
+                    <p>Apollo 8, 1968: First external perspective of Earth system. This image file fundamentally altered human environmental awareness protocols.</p>
+                    <div class="card-links">
+                        <a href="https://simple.wikipedia.org/wiki/Earthrise" class="card-link" target="_blank">DOWNLOAD</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>BLUE_MARBLE.RAW</h3>
+                    <p>Apollo 17, 1972: Maximum resolution Earth scan. The most replicated image in human digital archives - environmental movement starter file.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/The_Blue_Marble" class="card-link" target="_blank">ARCHIVE</a>
+                        <a href="https://www.nasa.gov/image-article/apollo-17-blue-marble/" class="card-link" target="_blank">NASA.GOV</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>PALE_BLUE_DOT.TIF</h3>
+                    <p>Voyager 1, 1990: Maximum zoom-out perspective. Sagan's cosmic humility algorithm compressed into a single pixel of light.</p>
+                    <div class="card-links">
+                        <a href="https://science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot/" class="card-link" target="_blank">TRANSMIT</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>AFGHAN_GIRL.PNG</h3>
+                    <p>Sharbat Gula, 1984: Piercing green optical sensors. National Geographic's most accessed neural pattern - haunting beauty.exe</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/Afghan_Girl" class="card-link" target="_blank">RETRIEVE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>LUNCH_BREAK.GIF</h3>
+                    <p>1932: Construction workers 840 feet above Manhattan grid. Zero safety protocols, maximum courage algorithm. Steel beam dining.exe</p>
+                    <div class="card-links">
+                        <a href="https://knowyourmeme.com/memes/lunch-atop-a-skyscraper" class="card-link" target="_blank">ACCESS</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>TANK_MAN.BMP</h3>
+                    <p>Tiananmen Square, 1989: Single human unit vs military array. Ultimate David vs Goliath protocol captured in digital eternity.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/Tank_Man" class="card-link" target="_blank">WITNESS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meme Templates Section -->
+    <section class="section" id="meme-templates">
+        <div class="container">
+            <div class="section-header">
+                <h2>⚡ VIRAL TEMPLATES ⚡</h2>
+                <p>Replicating data structures that dominate neural networks</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>DISTRACTED_BOYFRIEND.EXE</h3>
+                    <p>Ultimate choice algorithm template. This stock image became the universal relationship metaphor protocol across all digital platforms.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/Distracted_boyfriend" class="card-link" target="_blank">EXECUTE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>THIS_IS_FINE.APP</h3>
+                    <p>KC Green's chaos acceptance algorithm. Dog.exe sitting in fire - perfect metaphor for system failure denial protocols.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/This_Is_Fine" class="card-link" target="_blank">RUN</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>DRAKE_APPROVAL.SYS</h3>
+                    <p>Hotline Bling binary choice interface. Drake pointing algorithm = universal approval/disapproval protocol. No exceptions.</p>
+                    <div class="card-links">
+                        <a href="https://knowyourmeme.com/memes/drakes-approval" class="card-link" target="_blank">APPROVE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>WOMAN_YELLING_CAT.DBG</h3>
+                    <p>Table confrontation algorithm. Angry human vs confused feline = infinite argument generation possibilities. Peak drama synthesis.</p>
+                    <div class="card-links">
+                        <a href="https://knowyourmeme.com/memes/woman-yelling-at-a-cat" class="card-link" target="_blank">DEBUG</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>SURPRISED_PIKACHU.BAT</h3>
+                    <p>Shock expression subroutine. Yellow electric rodent representing universal "predictable consequences" response algorithm.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/Surprised_Pikachu" class="card-link" target="_blank">SHOCK</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>EXPANDING_BRAIN.AI</h3>
+                    <p>Four-panel intelligence escalation protocol. From smooth brain to galaxy brain - consciousness expansion visualization algorithm.</p>
+                    <div class="card-links">
+                        <a href="https://knowyourmeme.com/memes/expanding-brain" class="card-link" target="_blank">ASCEND</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>GIGACHAD.ALPHA</h3>
+                    <p>Peak masculinity rendering engine. When maximum alpha energy representation is required in the neural network architecture.</p>
+                    <div class="card-links">
+                        <a href="https://knowyourmeme.com/memes/gigachad" class="card-link" target="_blank">MAXIMIZE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>WOJAK_FEELS.EMO</h3>
+                    <p>Universal sadness protocol. From "feels bad man" to infinite existential dread variations across the digital consciousness.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/Wojak" class="card-link" target="_blank">FEEL</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>PEPE_RARE.NFT</h3>
+                    <p>The legendary amphibian that spawned infinite meme variations. From innocent feels to chaos god - ultimate viral evolution.</p>
+                    <div class="card-links">
+                        <a href="https://en.wikipedia.org/wiki/Pepe_the_Frog" class="card-link" target="_blank">COLLECT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section" id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2>⚡ TEMPORAL LOG ⚡</h2>
+                <p>Chronological sequence of viral consciousness evolution</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>1854 - FIRST DATA DETECTIVE</h3>
+                        <p>John Snow deploys cholera mapping protocol. Victorian-era CSI algorithm initiates the data-saves-lives movement.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>1869 - NAPOLEON FAILURE CHART</h3>
+                        <p>Minard visualizes ultimate military system collapse. More dramatic narrative compression than any Netflix algorithm.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>1932 - FEARLESS LUNCH PROTOCOL</h3>
+                        <p>Construction workers dining 840 feet above ground level. Zero safety.exe, maximum courage algorithm execution.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>1968 - EARTHRISE CONSCIOUSNESS</h3>
+                        <p>Apollo 8 transmits external Earth perspective. Instant environmental awareness activation across human neural networks.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>1990 - PALE BLUE DOT PROTOCOL</h3>
+                        <p>Voyager 1 delivers cosmic humility algorithm. Sagan's ultimate perspective pill transmitted from deep space.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2011 - XKCD SECURITY REVELATION</h3>
+                        <p>"correct horse battery staple" revolutionizes authentication thinking. Munroe = cybersecurity prophet confirmed.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2015-PRESENT - MEME TEMPLATE ERA</h3>
+                        <p>Drake, Distracted Boyfriend initialize visual language protocols. Peak template culture activates across all networks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cyberpunk Footer -->
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Text -->
+                <div class="footer-text">
+                    <h2 class="footer-title">ETERNAL MEMES</h2>
+                    <p class="footer-tagline">TRANSMITTING DIGITAL IMMORTALITY SINCE TIME.INIT</p>
+                    <div class="footer-links">
+                        <span class="footer-link">⚡ NEURAL LINK</span>
+                        <span class="footer-link">📡 DATA STREAM</span>
+                        <span class="footer-link">🌐 GLOBAL NET</span>
+                    </div>
+                </div>
+
+                <!-- Cyber Branding -->
+                <div class="cyber-branding">
+                    <div class="cyber-logo">
+                        <span class="cyber-letter">C</span>
+                        <span class="cyber-letter">Y</span>
+                        <span class="cyber-letter">B</span>
+                    </div>
+                    <p class="cyber-subtitle">CYBERNETIC ARCHIVES</p>
+                    <p class="copyright">© 2049 TYRELL CORPORATION<br>NEXUS-7 REPLICANT DIVISION</p>
+                </div>
+            </div>
+
+            <!-- Bottom Status Bar -->
+            <div class="footer-bottom">
+                <div class="data-stream">
+                    <div class="bit"></div>
+                    <div class="bit"></div>
+                    <div class="bit"></div>
+                    <div class="bit"></div>
+                    <div class="bit"></div>
+                </div>
+                <p class="status-text">STATUS: NEURAL NETWORK ACTIVE</p>
+                <div class="data-stream">
+                    <div class="bit"></div>
+                    <div class="bit"></div>
+                    <div class="bit"></div>
+                    <div class="bit"></div>
+                    <div class="bit"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create rain effect
+        function createRain() {
+            const rainContainer = document.getElementById('rain-container');
+            
+            for (let i = 0; i < 100; i++) {
+                const rainDrop = document.createElement('div');
+                rainDrop.className = 'rain-drop';
+                rainDrop.style.left = Math.random() * 100 + '%';
+                rainDrop.style.height = Math.random() * 100 + 50 + 'px';
+                rainDrop.style.animationDuration = Math.random() * 2 + 1 + 's';
+                rainDrop.style.animationDelay = Math.random() * 2 + 's';
+                rainContainer.appendChild(rainDrop);
+            }
+        }
+
+        // Loading screen
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            createRain();
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 2500);
+        });
+
+        // Navigation functionality
+        const navButtons = document.querySelectorAll('.nav-button');
+        const sections = document.querySelectorAll('.section, .hero');
+
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetSection = button.getAttribute('data-section');
+                const section = document.getElementById(targetSection);
+                section.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Update active nav button on scroll
+        function updateActiveNavButton() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop <= 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navButtons.forEach(button => {
+                button.classList.remove('active');
+                if (button.getAttribute('data-section') === current) {
+                    button.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavButton);
+
+        // Card animations
+        const cards = document.querySelectorAll('.card');
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            cardObserver.observe(card);
+        });
+
+        // Timeline animations
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateX(0)';
+                    }, index * 150);
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        timelineItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateX(-50px)';
+            item.style.transition = 'all 0.8s ease';
+            timelineObserver.observe(item);
+        });
+
+        // Section header animations
+        const sectionHeaders = document.querySelectorAll('.section-header');
+        const headerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        sectionHeaders.forEach(header => {
+            header.style.opacity = '0';
+            header.style.transform = 'translateY(50px)';
+            header.style.transition = 'all 1s ease';
+            headerObserver.observe(header);
+        });
+
+        // Cyberpunk hover effects for cards
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.borderColor = '#00ffff';
+                card.style.boxShadow = '0 8px 25px rgba(0, 255, 255, 0.3)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.borderColor = 'rgba(0, 255, 255, 0.4)';
+                card.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.5)';
+            });
+        });
+
+        // Accessibility
+        navButtons.forEach((button, index) => {
+            button.setAttribute('role', 'button');
+            button.setAttribute('aria-label', `Navigate to section ${index + 1}`);
+            button.setAttribute('tabindex', '0');
+            
+            button.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    button.click();
+                }
+            });
+        });
+
+        // Reduced motion for accessibility
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('*').forEach(el => {
+                el.style.animationDuration = '0.01ms';
+                el.style.animationIterationCount = '1';
+                el.style.transitionDuration = '0.01ms';
+            });
+        }
+    </script>
+</body>
+</html>
+                        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ ETERNAL MEMES ⚡ - Legends in the Neon Rain</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.4;
+            position: relative;
+        }
+
+        /* Cyberpunk Rain Effect */
+        .rain-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .rain-drop {
+            position: absolute;
+            background: linear-gradient(to bottom, transparent, #00ffff, transparent);
+            width: 2px;
+            animation: rain-fall linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes rain-fall {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Cyberpunk Background */
+        .cyberpunk-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            background: 
+                /* Brick wall texture */
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(50, 30, 30, 0.8) 0px,
+                    rgba(60, 35, 35, 0.9) 15px,
+                    rgba(40, 25, 25, 0.8) 16px,
+                    rgba(45, 28, 28, 0.8) 30px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(45, 28, 28, 0.9) 0px,
+                    rgba(55, 33, 33, 1) 50px,
+                    rgba(35, 23, 23, 0.8) 52px,
+                    rgba(50, 30, 30, 0.9) 100px
+                ),
+                /* Neon lighting gradients */
+                radial-gradient(circle at 20% 80%, rgba(255, 0, 150, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.2) 0%, transparent 50%),
+                /* Base dark background */
+                linear-gradient(135deg, #1a0a0a 0%, #2a1a1e 25%, #1e1a2e 50%, #0f1a30 75%, #0a0a1a 100%);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+            animation: cyberpunk-pulse 20s ease-in-out infinite;
+        }
+
+        @keyframes cyberpunk-pulse {
+            0%, 100% { filter: brightness(1) contrast(1.2); }
+            50% { filter: brightness(1.1) contrast(1.4); }
+        }
+
+        /* Neon Grid Lines */
+        .neon-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: grid-flicker 4s ease-in-out infinite;
+        }
+
+        @keyframes grid-flicker {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        /* Holographic Scan Lines */
+        .scan-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 255, 255, 0.03) 2px,
+                rgba(0, 255, 255, 0.03) 4px
+            );
+            animation: scan-sweep 3s linear infinite;
+        }
+
+        @keyframes scan-sweep {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(4px); }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -81,26 +1029,30 @@
             justify-content: center;
             text-align: center;
             position: relative;
-            background: 
-                radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%),
-                linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #0a0a0a 100%);
+            background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
         }
 
         .hero-content h1 {
             font-family: 'Orbitron', monospace;
-            font-size: clamp(3rem, 10vw, 8rem);
+            font-size: clamp(3rem, 10vw, 10rem);
             font-weight: 900;
             color: #ffffff;
             text-shadow: 
-                0 0 5px #00ffff,
-                0 0 10px #00ffff,
-                0 0 20px #00ffff,
-                0 0 40px #00ffff,
-                0 0 80px #00ffff;
+                0 0 5px #ff0080,
+                0 0 10px #ff0080,
+                0 0 15px #ff0080,
+                0 0 20px #ff0080,
+                0 0 35px #ff0080,
+                0 0 50px #ff0080,
+                0 0 2px #ffffff;
             margin-bottom: 1rem;
-            animation: neon-flicker 3s ease-in-out infinite;
+            animation: neon-flicker-pink 4s ease-in-out infinite;
             letter-spacing: 0.1em;
             text-transform: uppercase;
+            filter: 
+                drop-shadow(0 0 10px #ff0080)
+                drop-shadow(0 0 20px #ff0080)
+                drop-shadow(0 0 30px #ff0080);
         }
 
         .hero-subtitle {
@@ -115,6 +1067,7 @@
             margin-bottom: 2rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
         }
 
         .hero-tagline {
@@ -129,7 +1082,7 @@
         .hero-cta {
             display: inline-block;
             padding: 1rem 2.5rem;
-            background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
             border: 2px solid #00ffff;
             color: #00ffff;
             text-decoration: none;
@@ -141,166 +1094,542 @@
             overflow: hidden;
             transition: all 0.3s ease;
             box-shadow: 
+                inset 0 0 10px rgba(0, 255, 255, 0.2),
+                0 0 10px rgba(0, 255, 255, 0.4),
                 0 0 20px rgba(0, 255, 255, 0.3),
-                inset 0 0 20px rgba(0, 255, 255, 0.1);
+                0 0 30px rgba(0, 255, 255, 0.2);
+            text-shadow: 
+                0 0 5px #00ffff,
+                0 0 10px #00ffff;
         }
 
         .hero-cta:hover {
             transform: translateY(-2px);
             box-shadow: 
-                0 0 30px rgba(0, 255, 255, 0.6),
-                inset 0 0 30px rgba(0, 255, 255, 0.2);
-            text-shadow: 0 0 10px #00ffff;
+                inset 0 0 20px rgba(0, 255, 255, 0.3),
+                0 0 15px rgba(0, 255, 255, 0.6),
+                0 0 30px rgba(0, 255, 255, 0.5),
+                0 0 45px rgba(0, 255, 255, 0.4);
+            text-shadow: 
+                0 0 8px #00ffff,
+                0 0 16px #00ffff,
+                0 0 24px #00ffff;
         }
 
-        .status-bar {
+        /* Navigation */
+        .nav-terminal {
             position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
             background: rgba(0, 0, 0, 0.8);
             border: 1px solid #00ffff;
-            padding: 10px 20px;
-            font-family: 'Orbitron', monospace;
-            font-size: 0.9rem;
-            color: #00ffff;
-            text-shadow: 0 0 5px #00ffff;
-            letter-spacing: 0.1em;
+            border-radius: 3px;
+            padding: 1rem 0.5rem;
+            box-shadow: 
+                0 0 20px rgba(0, 255, 255, 0.3),
+                inset 0 0 10px rgba(0, 255, 255, 0.1);
             backdrop-filter: blur(10px);
         }
 
-        /* Animations */
-        @keyframes neon-flicker {
-            0%, 100% { 
-                text-shadow: 
-                    0 0 5px #00ffff,
-                    0 0 10px #00ffff,
-                    0 0 20px #00ffff,
-                    0 0 40px #00ffff,
-                    0 0 80px #00ffff;
-            }
-            50% { 
-                text-shadow: 
-                    0 0 2px #00ffff,
-                    0 0 5px #00ffff,
-                    0 0 10px #00ffff,
-                    0 0 20px #00ffff,
-                    0 0 40px #00ffff;
-            }
+        .nav-button {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 0.5rem 0;
+            background: transparent;
+            border: 1px solid #ff0080;
+            color: #ff0080;
+            font-weight: 600;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
         }
 
-        @keyframes neon-rainbow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .nav-button.active {
+            background: rgba(0, 255, 255, 0.2);
+            border-color: #00ffff;
+            color: #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-            .status-bar {
-                font-size: 0.7rem;
-                padding: 8px 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Loading Screen -->
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <div class="loader-text">INITIALIZING NEURAL NETWORK...</div>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>ETERNAL MEMES</h1>
-            <div class="hero-subtitle">LEGENDS IN THE NEON RAIN</div>
-            <p class="hero-tagline">Digital Immortals in the Age of Information</p>
-            <a href="#" class="hero-cta" onclick="showComingSoon()">⚡ ACCESS DATABASE ⚡</a>
-        </div>
-    </section>
-
-    <!-- Status Bar -->
-    <div class="status-bar">
-        STATUS: NEURAL NETWORK ACTIVE | NEXUS-7 ONLINE | TYRELL CORP v1.0
-    </div>
-
-    <script>
-        // Loading screen
-        window.addEventListener('load', () => {
-            const loader = document.getElementById('loader');
-            setTimeout(() => {
-                loader.classList.add('hidden');
-            }, 2500);
-        });
-
-        // Coming soon alert
-        function showComingSoon() {
-            const messages = [
-                "⚡ NEURAL PATHWAYS EXPANDING ⚡",
-                "🌧️ DIGITAL RAIN INTENSIFYING 🌧️", 
-                "🤖 REPLICANT SYSTEMS UPGRADING 🤖",
-                "🔴 FULL DATABASE COMING SOON 🔴"
-            ];
-            
-            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-            
-            // Custom cyberpunk alert
-            const alertDiv = document.createElement('div');
-            alertDiv.style.cssText = `
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: rgba(0, 0, 0, 0.9);
-                border: 2px solid #00ffff;
-                padding: 2rem;
-                font-family: 'Orbitron', monospace;
-                color: #00ffff;
-                text-shadow: 0 0 10px #00ffff;
-                z-index: 10000;
-                text-align: center;
-                backdrop-filter: blur(10px);
-                animation: fadeIn 0.3s ease;
-            `;
-            alertDiv.innerHTML = `
-                <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">${randomMessage}</h3>
-                <p style="margin-bottom: 1.5rem;">Full cyberpunk experience loading...</p>
-                <button onclick="this.parentElement.remove()" style="
-                    background: transparent;
-                    border: 1px solid #ff0080;
-                    color: #ff0080;
-                    padding: 0.5rem 1rem;
-                    cursor: pointer;
-                    font-family: inherit;
-                    text-transform: uppercase;
-                ">ACKNOWLEDGE</button>
-            `;
-            
-            document.body.appendChild(alertDiv);
-            
-            // Auto-remove after 5 seconds
-            setTimeout(() => {
-                if (alertDiv.parentElement) {
-                    alertDiv.remove();
-                }
-            }, 5000);
+        .nav-button:hover {
+            background: rgba(255, 0, 128, 0.2);
+            box-shadow: 0 0 15px rgba(255, 0, 128, 0.5);
+            text-shadow: 0 0 5px #ff0080;
         }
 
-        // Add some dynamic effects
-        setInterval(() => {
-            const statusBar = document.querySelector('.status-bar');
-            if (statusBar) {
-                const timestamp = new Date().toISOString().slice(11, 19);
-                statusBar.textContent = `STATUS: NEURAL NETWORK ACTIVE | TIME: ${timestamp} | NEXUS-7 ONLINE`;
-            }
-        }, 1000);
-    </script>
-</body>
-</html>
+        /* Section Styles */
+        .section {
+            min-height: 100vh;
+            padding: 4rem 0;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-header::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ffff, transparent);
+            box-shadow: 0 0 10px #00ffff;
+        }
+
+        /* Mixed color neon headings with subtle flickers */
+        #data-charts .section-header h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 
+                0 0 3px #00ffff,
+                0 0 8px #00ffff,
+                0 0 12px #00ffff,
+                0 0 16px #00ffff,
+                0 0 25px #00ffff,
+                0 0 35px #00ffff,
+                0 0 1px #ffffff;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            filter: 
+                drop-shadow(0 0 8px #00ffff)
+                drop-shadow(0 0 16px #00ffff)
+                drop-shadow(0 0 24px #00ffff);
+            animation: neon-flicker-cyan 5.5s ease-in-out infinite;
+        }
+
+        #illusions .section-header h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 
+                0 0 3px #00ff80,
+                0 0 8px #00ff80,
+                0 0 12px #00ff80,
+                0 0 16px #00ff80,
+                0 0 25px #00ff80,
+                0 0 35px #00ff80,
+                0 0 1px #ffffff;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            filter: 
+                drop-shadow(0 0 8px #00ff80)
+                drop-shadow(0 0 16px #00ff80)
+                drop-shadow(0 0 24px #00ff80);
+            animation: neon-flicker-green 6.2s ease-in-out infinite;
+        }
+
+        #iconic-photos .section-header h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 
+                0 0 3px #ff8000,
+                0 0 8px #ff8000,
+                0 0 12px #ff8000,
+                0 0 16px #ff8000,
+                0 0 25px #ff8000,
+                0 0 35px #ff8000,
+                0 0 1px #ffffff;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            filter: 
+                drop-shadow(0 0 8px #ff8000)
+                drop-shadow(0 0 16px #ff8000)
+                drop-shadow(0 0 24px #ff8000);
+            animation: neon-flicker-orange 4.8s ease-in-out infinite;
+        }
+
+        #meme-templates .section-header h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 
+                0 0 3px #8000ff,
+                0 0 8px #8000ff,
+                0 0 12px #8000ff,
+                0 0 16px #8000ff,
+                0 0 25px #8000ff,
+                0 0 35px #8000ff,
+                0 0 1px #ffffff;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            filter: 
+                drop-shadow(0 0 8px #8000ff)
+                drop-shadow(0 0 16px #8000ff)
+                drop-shadow(0 0 24px #8000ff);
+            animation: neon-flicker-purple 5.1s ease-in-out infinite;
+        }
+
+        #timeline .section-header h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 
+                0 0 3px #ffff00,
+                0 0 8px #ffff00,
+                0 0 12px #ffff00,
+                0 0 16px #ffff00,
+                0 0 25px #ffff00,
+                0 0 35px #ffff00,
+                0 0 1px #ffffff;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            filter: 
+                drop-shadow(0 0 8px #ffff00)
+                drop-shadow(0 0 16px #ffff00)
+                drop-shadow(0 0 24px #ffff00);
+            animation: neon-flicker-yellow 6.7s ease-in-out infinite;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            letter-spacing: 0.05em;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(20, 10, 30, 0.9));
+            border: 1px solid rgba(0, 255, 255, 0.4);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 
+                0 4px 15px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 15px rgba(0, 255, 255, 0.1);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff0080, #00ffff, #ffff00);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #00ffff;
+            box-shadow: 
+                0 8px 25px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                0 0 20px rgba(0, 255, 255, 0.3),
+                0 0 40px rgba(0, 255, 255, 0.2);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            text-shadow: 
+                0 0 3px #00ffff,
+                0 0 6px #00ffff,
+                0 0 9px #00ffff,
+                0 0 12px #00ffff,
+                0 0 1px #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            filter: drop-shadow(0 0 6px #00ffff);
+        }
+
+        .card p {
+            color: #e0e0e0;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .card-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .card-link {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: transparent;
+            border: 1px solid #ff0080;
+            color: #ff0080;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-link:hover {
+            background: rgba(255, 0, 128, 0.2);
+            box-shadow: 0 0 15px rgba(255, 0, 128, 0.5);
+            text-shadow: 0 0 5px #ff0080;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 3rem;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #ff0080, #00ffff, #ffff00);
+            box-shadow: 
+                0 0 10px rgba(0, 255, 255, 0.8),
+                0 0 20px rgba(0, 255, 255, 0.6);
+        }
+
+        .timeline-item {
+            margin: 3rem 0;
+            position: relative;
+            padding-left: 6rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 2.35rem;
+            top: 1rem;
+            width: 1.3rem;
+            height: 1.3rem;
+            background: #00ffff;
+            border-radius: 50%;
+            border: 3px solid #0a0a0a;
+            box-shadow: 
+                0 0 15px rgba(0, 255, 255, 1),
+                0 0 30px rgba(0, 255, 255, 0.8),
+                inset 0 0 10px rgba(255, 255, 255, 0.3);
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { box-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(255, 255, 255, 0.3); }
+            50% { box-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 50px rgba(0, 255, 255, 1), inset 0 0 15px rgba(255, 255, 255, 0.5); }
+        }
+
+        .timeline-content {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 50, 100, 0.2));
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-content:hover {
+            transform: translateX(10px);
+            border-color: #00ffff;
+            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+        }
+
+        .timeline-content h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            color: #00ffff;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Footer */
+        .cyber-footer {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 50, 100, 0.3));
+            border-top: 2px solid rgba(0, 255, 255, 0.5);
+            padding: 4rem 0 2rem;
+            position: relative;
+            backdrop-filter: blur(20px);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            color: #ffffff;
+            text-shadow: 
+                0 0 5px #00ffff,
+                0 0 10px #00ffff,
+                0 0 15px #00ffff,
+                0 0 20px #00ffff,
+                0 0 1px #ffffff;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            filter: drop-shadow(0 0 10px #00ffff);
+        }
+
+        .footer-tagline {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            font-weight: 600;
+            color: #ff0080;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            padding: 0.5rem 1rem;
+            border: 1px solid #ff0080;
+            background: transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .footer-link:hover {
+            background: rgba(255, 0, 128, 0.2);
+            box-shadow: 0 0 15px rgba(255, 0, 128, 0.5);
+            text-shadow: 0 0 5px #ff0080;
+        }
+
+        .cyber-logo {
+            display: flex;
+            justify-content: center;
+            gap: 0.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cyber-letter {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 900;
+            text-shadow: 0 0 10px currentColor;
+            animation: letter-glow 3s ease-in-out infinite;
+        }
+
+        .cyber-letter:nth-child(1) {
+            color: #ff0080;
+            animation-delay: 0s;
+        }
+
+        .cyber-letter:nth-child(2) {
+            color: #00ffff;
+            animation-delay: 0.5s;
+        }
+
+        .cyber-letter:nth-child(3) {
+            color: #ffff00;
+            animation-delay: 1s;
+        }
+
+        @keyframes letter-glow {
+            0%, 100% { text-shadow: 0 0 10px currentColor; }
+            50% { text-shadow: 0 0 20px currentColor, 0 0 30px currentColor; }
+        }
+
+        .cyber-subtitle {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 255, 255, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .data-stream {
+            display: flex;
+            gap: 0.2rem;
+            align-items: flex-end;
+        }
+
+        .data-stream .bit {
+            width: 6px;
+            background: linear-gradient(to top, #ff0080, #00ffff);
+            border-radius: 1px;
+            animation: data-flow 1.5s ease-in-out infinite;
+        }
+
+        .data-stream .bit:nth-child(1) {
+            height: 8px;
+            animation-delay: 0s;
+        }
+
+        .data-stream .bit:nth-child(2) {
+            height: 12
