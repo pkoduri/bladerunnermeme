@@ -1,0 +1,23 @@
+{
+  "name": "eternal-memes-cyberpunk",
+  "version": "1.0.0",
+  "description": "Cyberpunk Blade Runner style eternal memes showcase",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5"
+  },
+  "keywords": ["cyberpunk", "memes", "blade-runner", "neon", "viral"],
+  "author": "Tyrell Corporation",
+  "license": "MIT"
+}
