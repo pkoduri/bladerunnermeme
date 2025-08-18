@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ ETERNAL MEMES ⚡ - Legends in the Neon Rain</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.4;
+            position: relative;
+        }
+
+        /* Cyberpunk Rain Effect */
+        .rain-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .rain-drop {
+            position: absolute;
+            background: linear-gradient(to bottom, transparent, #00ffff, transparent);
+            width: 2px;
+            animation: rain-fall linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes rain-fall {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Enhanced Cyberpunk Background */
+        .cyberpunk-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            background: 
+                /* Brick wall texture */
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(50, 30, 30, 0.8) 0px,
+                    rgba(60, 35, 35, 0.9) 15px,
+                    rgba(40, 25, 25, 0.8) 16px,
+                    rgba(45, 28, 28, 0.8) 30px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(45, 28, 28, 0.9) 0px,
+                    rgba(55, 33, 33, 1) 50px,
+                    rgba(35, 23, 23, 0.8) 52px,
+                    rgba(50, 30, 30, 0.9) 100px
+                ),
+                /* Neon lighting gradients */
+                radial-gradient(circle at 20% 80%, rgba(255, 0, 150, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.2) 0%, transparent 50%),
+                /* Base dark background */
+                linear-gradient(135deg, #1a0a0a 0%, #2a1a1e 25%, #1e1a2e 50%, #0f1a30 75%, #0a0a1a 100%);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+            animation: cyberpunk-pulse 20s ease-in-out infinite;
+        }
+
+        @keyframes cyberpunk-pulse {
+            0%, 100% { filter: brightness(1) contrast(1.2); }
+            50% { filter: brightness(1.1) contrast(1.4); }
+        }
+
+        /* Neon Grid Lines */
+        .neon-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: grid-flicker 4s ease-in-out infinite;
+        }
+
+        @keyframes grid-flicker {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        /* Holographic Scan Lines */
+        .scan-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 255, 255, 0.03) 2px,
+                rgba(0, 255, 255, 0.03) 4px
+            );
+            animation: scan-sweep 3s linear infinite;
+        }
+
+        @keyframes scan-sweep {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(4px); }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .hero-content h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(3rem, 10vw, 10rem);
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 
+                0 0 5px #ff0080,
+                0 0 10px #ff0080,
+                0 0 15px #ff0080,
+                0 0 20px #ff0080,
+                0 0 35px #ff0080,
+                0 0 50px #ff0080,
+                0 0 2px #ffffff;
+            margin-bottom: 1rem;
+            animation: neon-flicker-pink 4s ease-in-out infinite;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            filter: 
+                drop-shadow(0 0 10px #ff0080)
+                drop-shadow(0 0 20px #ff0080)
+                drop-shadow(0 0 30px #ff0080);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 2.5rem);
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff0080, #00ffff, #ffff00);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: neon-rainbow 4s ease-in-out infinite;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        .hero-tagline {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #b0b0b0;
+            margin-bottom: 3rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            letter-spacing: 0.05em;
+        }
+
+        /* Section header animations with different colors */
+        #data-charts .section-header h2 {
+            color: #ffffff;
+            text-shadow: 
+                0 0 3px #00ffff,
+                0 0 8px #00ffff,
+                0 0 12px #00ffff,
+                0 0 16px #00ffff,
+                0 0 25px #00ffff,
+                0 0 35px #00ffff,
+                0 0 1px #ffffff;
+            filter: 
+                drop-shadow(0 0 8px #00ffff)
+                drop-shadow(0 0 16px #00ffff)
+                drop-shadow(0 0 24px #00ffff);
+            animation: neon-flicker-cyan 5.5s ease-in-out infinite;
+        }
+
+        #illusions .section-header h2 {
+            color: #ffffff;
+            text-shadow: 
+                0 0 3px #00ff80,
+                0 0 8px #00ff80,
+                0 0 12px #00ff80,
+                0 0 16px #00ff80,
+                0 0 25px #00ff80,
+                0 0 35px #00ff80,
+                0 0 1px #ffffff;
+            filter: 
+                drop-shadow(0 0 8px #00ff80)
+                drop-shadow(0 0 16px #00ff80)
+                drop-shadow(0 0 24px #00ff80);
+            animation: neon-flicker-green 6.2s ease-in-out infinite;
+        }
+
+        #timeline .section-header h2 {
+            color: #ffffff;
+            text-shadow: 
+                0 0 3px #ffff00,
+                0 0 8px #ffff00,
+                0 0 12px #ffff00,
+                0 0 16px #ffff00,
+                0 0 25px #ffff00,
+                0 0 35px #ffff00,
+                0 0 1px #ffffff;
+            filter: 
+                drop-shadow(0 0 8px #ffff00)
+                drop-shadow(0 0 16px #ffff00)
+                drop-shadow(0 0 24px #ffff00);
+            animation: neon-flicker-yellow 6.7s ease-in-out infinite;
+        }
+
+        /* Flicker animations */
+        @keyframes neon-flicker-pink {
+            0%, 95%, 100% { 
+                text-shadow: 
+                    0 0 5px #ff0080,
+                    0 0 10px #ff0080,
+                    0 0 15px #ff0080,
+                    0 0 20px #ff0080,
+                    0 0 35px #ff0080,
+                    0 0 50px #ff0080,
+                    0 0 2px #ffffff;
+                filter: 
+                    drop-shadow(0 0 10px #ff0080)
+                    drop-shadow(0 0 20px #ff0080)
+                    drop-shadow(0 0 30px #ff0080);
+            }
+            96%, 97% { 
+                text-shadow: 
+                    0 0 2px #ff0080,
+                    0 0 5px #ff0080,
+                    0 0 8px #ff0080,
+                    0 0 12px #ff0080,
+                    0 0 20px #ff0080,
+                    0 0 30px #ff0080,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 5px #ff0080)
+                    drop-shadow(0 0 10px #ff0080)
+                    drop-shadow(0 0 15px #ff0080);
+            }
+        }
+
+        @keyframes neon-flicker-cyan {
+            0%, 92%, 100% { 
+                text-shadow: 
+                    0 0 3px #00ffff,
+                    0 0 8px #00ffff,
+                    0 0 12px #00ffff,
+                    0 0 16px #00ffff,
+                    0 0 25px #00ffff,
+                    0 0 35px #00ffff,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 8px #00ffff)
+                    drop-shadow(0 0 16px #00ffff)
+                    drop-shadow(0 0 24px #00ffff);
+            }
+            93%, 95% { 
+                text-shadow: 
+                    0 0 1px #00ffff,
+                    0 0 4px #00ffff,
+                    0 0 6px #00ffff,
+                    0 0 8px #00ffff,
+                    0 0 12px #00ffff,
+                    0 0 18px #00ffff,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 4px #00ffff)
+                    drop-shadow(0 0 8px #00ffff)
+                    drop-shadow(0 0 12px #00ffff);
+            }
+        }
+
+        @keyframes neon-flicker-green {
+            0%, 88%, 100% { 
+                text-shadow: 
+                    0 0 3px #00ff80,
+                    0 0 8px #00ff80,
+                    0 0 12px #00ff80,
+                    0 0 16px #00ff80,
+                    0 0 25px #00ff80,
+                    0 0 35px #00ff80,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 8px #00ff80)
+                    drop-shadow(0 0 16px #00ff80)
+                    drop-shadow(0 0 24px #00ff80);
+            }
+            89%, 91% { 
+                text-shadow: 
+                    0 0 1px #00ff80,
+                    0 0 4px #00ff80,
+                    0 0 6px #00ff80,
+                    0 0 8px #00ff80,
+                    0 0 12px #00ff80,
+                    0 0 18px #00ff80,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 4px #00ff80)
+                    drop-shadow(0 0 8px #00ff80)
+                    drop-shadow(0 0 12px #00ff80);
+            }
+        }
+
+        @keyframes neon-flicker-yellow {
+            0%, 86%, 100% { 
+                text-shadow: 
+                    0 0 3px #ffff00,
+                    0 0 8px #ffff00,
+                    0 0 12px #ffff00,
+                    0 0 16px #ffff00,
+                    0 0 25px #ffff00,
+                    0 0 35px #ffff00,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 8px #ffff00)
+                    drop-shadow(0 0 16px #ffff00)
+                    drop-shadow(0 0 24px #ffff00);
+            }
+            87%, 89% { 
+                text-shadow: 
+                    0 0 1px #ffff00,
+                    0 0 4px #ffff00,
+                    0 0 6px #ffff00,
+                    0 0 8px #ffff00,
+                    0 0 12px #ffff00,
+                    0 0 18px #ffff00,
+                    0 0 1px #ffffff;
+                filter: 
+                    drop-shadow(0 0 4px #ffff00)
+                    drop-shadow(0 0 8px #ffff00)
+                    drop-shadow(0 0 12px #ffff00);
+            }
+        }
+
+        @keyframes neon-rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Navigation Terminal */
+        .nav-terminal {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #00ffff;
+            border-radius: 3px;
+            padding: 1rem 0.5rem;
+            box-shadow: 
+                0 0 20px rgba(0, 255, 255, 0.3),
+                inset 0 0 10px rgba(0, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-button {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 0.5rem 0;
+            background: transparent;
+            border: 1px solid #ff0080;
+            color: #ff0080;
+            font-weight: 600;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .nav-button.active {
+            background: rgba(0, 255, 255, 0.2);
+            border-color: #00ffff;
+            color: #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        .nav-button:hover {
+            background: rgba(255, 0, 128, 0.2);
+            box-shadow: 0 0 15px rgba(255, 0, 128, 0.5);
+            text-shadow: 0 0 5px #ff0080;
+        }
+
+        /* Enhanced CTA Button */
+        .hero-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+            border: 2px solid #00ffff;
+            color: #00ffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 
+                0 0 20px rgba(0, 255, 255, 0.3),
+                inset 0 0 20px rgba(0, 255, 255, 0.1);
+            font-family: 'Orbitron', monospace;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 0 30px rgba(0, 255, 255, 0.6),
+                inset 0 0 30px rgba(0, 255, 255, 0.2);
+            text-shadow: 0 0 10px #00ffff;
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .hero-cta:hover::before {
+            left: 100%;
+        }
+
+        /* Section Styles */
+        .section {
+            min-height: 100vh;
+            padding: 4rem 0;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-header::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ffff, transparent);
+            box-shadow: 0 0 10px #00ffff;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            letter-spacing: 0.05em;
+        }
+
+        /* Era sections */
+        .era-section {
+            margin: 60px 0;
+            border: 1px solid transparent;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(20, 10, 30, 0.9));
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 
+                0 4px 15px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 15px rgba(0, 255, 255, 0.1);
+        }
+
+        .era-section:hover {
+            transform: scale(1.02);
+            box-shadow: 
+                0 0 30px rgba(0, 255, 255, 0.3),
+                inset 0 0 30px rgba(255, 0, 255, 0.1);
+        }
+
+        .era-section::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00ffff, #ff0080, #00ff41, #ff9500);
+            border-radius: 12px;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .era-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #00ff41;
+            text-shadow: 0 0 15px #00ff41;
+            position: relative;
+        }
+
+        .era-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #00ff41, transparent);
+            box-shadow: 0 0 10px #00ff41;
+        }
+
+        .meme-item {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #8000ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .meme-item:hover {
+            border-color: #ffff00;
+            box-shadow: 
+                0 0 20px rgba(255, 255, 0, 0.3),
+                inset 0 0 20px rgba(255, 255, 0, 0.1);
+            transform: translateX(10px);
+        }
+
+        .meme-year {
+            font-family: 'Orbitron', monospace;
+            color: #ff9500;
+            font-weight: 700;
+            font-size: 1.1em;
+            text-shadow: 0 0 10px #ff9500;
+            margin-bottom: 10px;
+        }
+
+        .meme-title {
+            color: #00ffff;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px #00ffff;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .meme-description {
+            line-height: 1.6;
+            color: #cccccc;
+            margin-bottom: 15px;
+        }
+
+        /* Theory section */
+        .theory-section {
+            background: linear-gradient(135deg, rgba(191, 0, 255, 0.1), rgba(0, 255, 65, 0.1));
+            border: 2px solid #8000ff;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 80px 0;
+            position: relative;
+        }
+
+        .theory-section::before {
+            content: 'ANALYSIS_PROTOCOL.exe';
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: #0a0a0a;
+            color: #8000ff;
+            padding: 5px 15px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.9em;
+            text-shadow: 0 0 10px #8000ff;
+        }
+
+        .theory-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2em;
+            color: #8000ff;
+            text-shadow: 0 0 15px #8000ff;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .theory-item {
+            background: rgba(0, 0, 0, 0.5);
+            border-left: 4px solid #00ff41;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .theory-item:hover {
+            border-left-color: #ffff00;
+            box-shadow: -10px 0 20px rgba(255, 255, 0, 0.2);
+            transform: translateX(5px);
+        }
+
+        .theory-item h3 {
+            color: #ff0080;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px #ff0080;
+            font-size: 1.2em;
+            font-family: 'Orbitron', monospace;
+        }
+
+        /* Floating Holograms */
+        .hologram {
+            position: absolute;
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0.7;
+        }
+
+        .hologram-cube {
+            width: 30px;
+            height: 30px;
+            background: transparent;
+            border: 1px solid #00ffff;
+            animation: hologram-float 8s ease-in-out infinite;
+            transform-style: preserve-3d;
+        }
+
+        .hologram-triangle {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 25px solid rgba(255, 0, 128, 0.7);
+            animation: hologram-spin 6s linear infinite;
+        }
+
+        .hologram-circle {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ffff00;
+            border-radius: 50%;
+            animation: hologram-pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes hologram-float {
+            0%, 100% { transform: translateY(0) rotateX(0deg); }
+            50% { transform: translateY(-20px) rotateX(180deg); }
+        }
+
+        @keyframes hologram-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes hologram-pulse {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.2); opacity: 1; }
+        }
+
+        /* Loading Screen */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0a0a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-spinner {
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-top: 2px solid #00ffff;
+            border-radius: 50%;
+            animation: cyber-spin 1s linear infinite;
+            margin: 0 auto 2rem;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        @keyframes cyber-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loader-text {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-terminal {
+                display: none;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">INITIALIZING NEURAL NETWORK...</div>
+        </div>
+    </div>
+
+    <!-- Cyberpunk Background Effects -->
+    <div class="cyberpunk-bg"></div>
+    <div class="neon-grid"></div>
+    <div class="scan-lines"></div>
+    
+    <!-- Rain Effect -->
+    <div class="rain-container" id="rain-container"></div>
+
+    <!-- Navigation Terminal -->
+    <div class="nav-terminal">
+        <button class="nav-button active" data-section="hero">HOME</button>
+        <button class="nav-button" data-section="data-charts">DATA</button>
+        <button class="nav-button" data-section="illusions">MIND</button>
+        <button class="nav-button" data-section="timeline">TIME</button>
+        <button class="nav-button" data-section="theories">CODE</button>
+    </div>
+
+    <!-- Floating Holograms -->
+    <div class="hologram hologram-cube" style="top: 40%; right: 25%;"></div>
+    <div class="hologram hologram-triangle" style="top: 60%; right: 15%;"></div>
+    <div class="hologram hologram-circle" style="bottom: 30%; left: 20%;"></div>
+    <div class="hologram hologram-cube" style="top: 20%; left: 10%;"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>ETERNAL MEMES</h1>
+            <div class="hero-subtitle">LEGENDS IN THE NEON RAIN</div>
+            <p class="hero-tagline">Digital Immortals in the Age of Information</p>
+            <a href="#data-charts" class="hero-cta">⚡ ACCESS DATABASE ⚡</a>
+        </div>
+    </section>
+
+    <!-- Data & Charts Section -->
+    <section class="section" id="data-charts">
+        <div class="container">
+            <div class="section-header">
+                <h2>⚡ DATA VAULT ⚡</h2>
+                <p>Neural patterns that rewired human consciousness before the digital age</p>
+            </div>
+            
+            <div class="era-section">
+                <h2 class="era-title">PROTOTYPE_ERA // 1850s-1900s</h2>
+                <div class="meme-item">
+                    <div class="meme-year">1854</div>
+                    <div class="meme-title">CHOLERA_MAP.data</div>
+                    <div class="meme-description">John Snow's cholera dot map—viral proof that mapping beats intuition. Evidence visualization protocol.</div>
+                </div>
+                <div class="meme-item">
+                    <div class="meme-year">1858</div>
+                    <div class="meme-title">NIGHTINGALE_ROSE.chart</div>
+                    <div class="meme-description">Florence Nightingale's "rose/coxcomb" visualization—resurrected for health data, women in STEM narratives.</div>
+                </div>
+                <div class="meme-item">
+                    <div class="meme-year">1869</div>
+                    <div class="meme-title">NAPOLEON_MARCH.flow</div>
+                    <div class="meme-description">Minard's flow map—eternal "best chart ever" designation. Visual storytelling perfection.</div>
+                </div>
+                <div class="meme-item">
+                    <div class="meme-year">1888</div>
+                    <div class="meme-title">DUAL_PERCEPTION.illusion</div>
+                    <div class="meme-description">"My Wife & My Mother-in-Law"—cyclical resurgence every few months. Perception reality check.</div>
+                </div>
+            </div>
+
+            <div class="era-section">
+                <h2 class="era-title">WAR_ARTIFACTS // 1930s-1940s</h2>
+                <div class="meme-item">
+                    <div class="meme-year">1934</div>
+                    <div class="meme-title">LOCH_NESS.hoax</div>
+                    <div class="meme-description">Surgeon's photo—debunked 1994, still circulating. Hoax immortality protocol.</div>
+                </div>
+                <div class="meme-item">
+                    <div class="meme-year">1943</div>
+                    <div class="meme-title">WE_CAN_DO_IT.propaganda</div>
+                    <div class="meme-description">Often mislabeled as Rosie recruitment. 1980s rediscovery → universal empowerment template.</div>
+                </div>
+                <div class="meme-item">
+                    <div class="meme-year">1939/2000</div>
+                    <div class="meme-title">KEEP_CALM.directive</div>
+                    <div class="meme-description">From dusty bookshop to global stoic meme shorthand. Rediscovery amplification effect.</div>
+                </div>
+            </div>
+
+            <div class="era-section">
+                <h2 class="era-title">TEMPLATE_DOMINANCE // 2010s</h2>
+                <div class="meme-item">
+                    <div class="meme-year">2011</div>
+                    <div class="meme-title">HORSE_BATTERY_STAPLE.security</div>
+                    <div class="meme-description">XKCD password wisdom—endless security debate regeneration.</div>
+                </div>
+                <div class="meme-item">
+                    <div class="meme-year">2015</div>
+                    <div class="meme-title">DISTRACTED_BOYFRIEND.choice</div>
+                    <div class="meme-description">Stock photo → swiss-army meme for trade-off narratives. Ultimate template success.</div>
+                </div>
+                <div class="meme-item">
+                    <div class="meme-year">2013-2015</div>
+                    <div class="meme-title">THIS_IS_FINE.crisis</div>
+                    <div class="meme-description">Crisis-cycle resurrection protocol. Eternal relevance through chaos.</div>
+                </div>
+                <div class="meme-item">
+                    <div class="meme-year">2019</div>
+                    <div class="meme-title">WOMAN_YELLING_CAT.fusion</div>
+                    <div class="meme-description">Reality TV + Tumblr cat mashup. Hybrid meme evolution success.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Illusions Section -->
+    <section class="section" id="illusions">
+        <div class="container">
+            <div class="section-header">
+                <h2>⚡ NEURAL GLITCHES ⚡</h2>
+                <p>Visual exploits that hack human perception protocols</p>
+            </div>
+            
+            <div class="era-section">
+                <h2 class="era-title">PERCEPTION_HACKS // Reality Exploits</h2>
+                <div class="meme-item">
+                    <div class="meme-year">1995</div>
+                    <div class="meme-title">CHECKER_SHADOW.paradox</div>
+                    <div class="meme-description">Adelson's reality-breaking proof. Perception ≠ reality demonstration protocol.</div>
+                </div>
+                <div class="meme-item">
+                    <div class="meme-year">2003</div>
+                    <div class="meme-title">SPINNING_DANCER.test</div>
+                    <div class="meme-description">N. Kayahara creation—fake brain test, real viral power. Pseudoscience amplification.</div>
+                </div>
+                <div class="meme-item">
+                    <div class="meme-year">1888/1915</div>
+                    <div class="meme-title">DUAL_FACE.bistable</div>
+                    <div class="meme-description">"My Wife & My Mother-in-Law"—century-old perception hack. Visual processing exploit.</div>
+                </div>
+                <div class="meme-item">
+                    <div class="meme-year">2015</div>
+                    <div class="meme-title">THE_DRESS.schism</div>
+                    <div class="meme-description">Blue/Black vs White/Gold—viral perception virus dividing neural networks globally.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section" id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2>⚡ TEMPORAL LOG ⚡</h2>
+                <p>Chronological sequence of viral consciousness evolution</p>
+            </div>
+            
+            <div class="era-section">
+                <h2 class="era-title">RECIRCULATION_AGE // 2020s</h2>
+                <div class="meme-item">
+                    <div class="meme-year">2020+</div>
+                    <div class="meme-title">NFT_RESURRECTION.protocol</div>
+                    <div class="meme-description">Old icons → news pegs → fresh viral waves. Disaster Girl NFT case study.</div>
+                </div>
+                <div class="meme-item">
+                    <div class="meme-year">2020+</div>
+                    <div class="meme-title">ALGORITHMIC_REVIVAL.system</div>
+                    <div class="meme-description">Even debunked content gets periodic boosts when adjacent topics trend.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theories Section -->
+    <section class="section" id="theories">
+        <div class="container">
+            <div class="theory-section">
+                <div class="theory-title">REPLICATION_THEORIES.exe</div>
+                <div class="theory-item">
+                    <h3>1. CULTURAL_REPLICATORS.dawkins</h3>
+                    <p>Memes as viral cultural DNA—natural selection for ideas. Remix-friendly formats achieve immortality through mutation and selection pressure.</p>
+                </div>
+                <div class="theory-item">
+                    <h3>2. COGNITIVE_ATTRACTORS.sperber</h3>
+                    <p>Human minds gravitate toward certain patterns: clear contrasts, resolvable ambiguity, simple story frames. Illusions and charts are cognitive magnets.</p>
+                </div>
+                <div class="theory-item">
+                    <h3>3. BROADCAST_AMPLIFICATION.structural</h3>
+                    <p>Big cascades aren't always organic viral—they're rebroadcasts via large accounts. Platform algorithms resurrect "On this day" content.</p>
+                </div>
+                <div class="theory-item">
+                    <h3>4. LOW_REMIX_COST.affordance</h3>
+                    <p>Stock photos, clean templates, one-glance explainers. Cheap localization across languages/cultures. Template accessibility = immortality.</p>
+                </div>
+                <div class="theory-item">
+                    <h3>5. MORAL_EMOTIONAL_CHARGE.spread</h3>
+                    <p>Negativity and moral outrage travel faster/farther. Outrage versions of classics outperform neutral iterations.</p>
+                </div>
+                <div class="theory-item">
+                    <h3>6. PEDAGOGICAL_LOOPS.education</h3>
+                    <p>Teachers recycle the same "aha!" visuals. Each new cohort rediscovers and reshares. Educational immortality cycle.</p>
+                </div>
+                <div class="theory-item">
+                    <h3>7. DEBUNK_BAIT.correction</h3>
+                    <p>Misunderstandings invite cyclical correction threads—which themselves keep images alive. Error propagation as life support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Create rain effect
+        function createRain() {
+            const rainContainer = document.getElementById('rain-container');
+            
+            for (let i = 0; i < 150; i++) {
+                const rainDrop = document.createElement('div');
+                rainDrop.className = 'rain-drop';
+                rainDrop.style.left = Math.random() * 100 + '%';
+                rainDrop.style.height = Math.random() * 100 + 50 + 'px';
+                rainDrop.style.animationDuration = Math.random() * 2 + 1 + 's';
+                rainDrop.style.animationDelay = Math.random() * 2 + 's';
+                rainContainer.appendChild(rainDrop);
+            }
+        }
+
+        // Loading screen
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            createRain();
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 2500);
+        });
+
+        // Navigation functionality
+        const navButtons = document.querySelectorAll('.nav-button');
+        const sections = document.querySelectorAll('.section, .hero');
+
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetSection = button.getAttribute('data-section');
+                const section = document.getElementById(targetSection);
+                section.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Update active nav button on scroll
+        function updateActiveNavButton() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop <= 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navButtons.forEach(button => {
+                button.classList.remove('active');
+                if (button.getAttribute('data-section') === current) {
+                    button.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavButton);
+
+        // Enhanced era section animations
+        const eraSections = document.querySelectorAll('.era-section');
+        const eraObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                    }, index * 200);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        eraSections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(50px) scale(0.95)';
+            section.style.transition = 'all 0.8s ease';
+            eraObserver.observe(section);
+        });
+
+        // Parallax for holograms
+        const holograms = document.querySelectorAll('.hologram');
+        
+        function updateHologramParallax() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.3;
+            
+            holograms.forEach((hologram, index) => {
+                const speed = (index + 1) * 0.4;
+                hologram.style.transform = `translateY(${rate * speed}px)`;
+            });
+        }
+
+        window.addEventListener('scroll', updateHologramParallax);
+
+        // Section header animations
+        const sectionHeaders = document.querySelectorAll('.section-header');
+        const headerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        sectionHeaders.forEach(header => {
+            header.style.opacity = '0';
+            header.style.transform = 'translateY(50px)';
+            header.style.transition = 'all 1s ease';
+            headerObserver.observe(header);
+        });
+
+        // Cyberpunk glitch effect on hover
+        document.addEventListener('mousemove', (e) => {
+            const cursor = { x: e.clientX, y: e.clientY };
+            
+            holograms.forEach(hologram => {
+                const rect = hologram.getBoundingClientRect();
+                const distance = Math.sqrt(
+                    Math.pow(cursor.x - (rect.left + rect.width/2), 2) + 
+                    Math.pow(cursor.y - (rect.top + rect.height/2), 2)
+                );
+                
+                if (distance < 100) {
+                    hologram.style.filter = 'hue-rotate(180deg) brightness(1.5)';
+                } else {
+                    hologram.style.filter = 'none';
+                }
+            });
+        });
+
+        // Terminal sound simulation on nav clicks
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    button.style.transform = 'scale(1)';
+                }, 100);
+            });
+        });
+
+        // Accessibility
+        navButtons.forEach((button, index) => {
+            button.setAttribute('role', 'button');
+            button.setAttribute('aria-label', `Navigate to section ${index + 1}`);
+            button.setAttribute('tabindex', '0');
+            
+            button.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    button.click();
+                }
+            });
+        });
+
+        // Reduced motion for accessibility
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('*').forEach(el => {
+                el.style.animationDuration = '0.01ms';
+                el.style.animationIterationCount = '1';
+                el.style.transitionDuration = '0.01ms';
+            });
+        }
+
+        // Dynamic title color cycling
+        const title = document.querySelector('.hero-content h1');
+        const colors = ['#ff0080', '#00ffff', '#00ff41', '#ff9500', '#8000ff', '#ffff00'];
+        let colorIndex = 0;
+        
+        setInterval(() => {
+            title.style.color = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }, 4000);
+    </script>
+</body>
+</html>
+    <div class="hologram hologram-triangle" style="top: 60%; right: 15%;"></div>
+    <div class="hologram hologram-circle" style="bottom: 30%; left: 20%;"></div>
+    <div class="hologram hologram-cube" style="top: 60%; right: 15%;"></div>
